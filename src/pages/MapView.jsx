@@ -19,7 +19,7 @@ const MapView = ({ openDetail, setShowDetail }) => {
         />
         {/* her bir ucus ıcın ekranda ucagın konumuna denk gelen marker basma  */}
         {store?.flights.map((fly) => (
-          <Marker position={[fly.lat, fly.lan]}>
+          <Marker key={fly.key} position={[fly.lat, fly.lan]}>
             <Popup>
               <div className="popup">
                 <span>Kod: {fly.code}</span>
